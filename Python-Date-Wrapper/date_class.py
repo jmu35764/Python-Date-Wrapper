@@ -4,6 +4,10 @@ import calendar
 class Date:
     def __init__(self, year: int = 1900, month: int = 1, day: int = 1) -> None:
         self.__date = date(year, month, day)
+
+    def set_date(self, year: int, month: int, day: int) -> None:
+        new_date = date(year, month, day)
+        self.__date = new_date
     
 @property
 def year(self) -> int:
