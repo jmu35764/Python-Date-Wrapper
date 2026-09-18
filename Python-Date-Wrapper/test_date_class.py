@@ -12,7 +12,7 @@ class TestDate(unittest.TestCase):
 
     def test_date_entry(self):
         #Test if the value errors are raised when necesary
-        self.assertRaises(ValueError)
+        self.assertRaises(ValueError):
             Date(1950, 13, 32)
 
 
