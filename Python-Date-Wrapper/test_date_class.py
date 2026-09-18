@@ -3,7 +3,7 @@ from date_class import Date
 
 class TestDate(unittest.TestCase):
 
-    def test_construction(self):
+    def test_constructor(self):
         #Test if the constructor for the date class gives the desired  date
         d = Date()
         self.assertEqual(d.year, 1900)
@@ -12,8 +12,16 @@ class TestDate(unittest.TestCase):
 
     def test_date_entry(self):
         #Test if the value errors are raised when necesary
-        self.assertRaises(ValueError):
-            Date(1950, 13, 32)
+        self.assertRaises(ValueError)
+        d1 = Date(1950, 13, 32)
+
+    def test_day_property_mod(self):
+        #Test if the day property can be modified
+        d = Date(2020, 2, 29)
+        d.set_date(2021, 2, 28)
+        self.assertEqual(d.year, 2021)
+        self.assertEqual(d.month, 2)
+        self.assertEqual(d.day, 28)
 
 
 if __name__ == '__main__':
