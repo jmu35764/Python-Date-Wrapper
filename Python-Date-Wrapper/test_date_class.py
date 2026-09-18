@@ -10,6 +10,10 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.month, 1)
         self.assertEqual(d.day, 1)
 
+    def test_date_entry(self):
+        #Test if the value errors are raised when necesary
+        self.assertRaises(ValueError)
+            Date(1950, 13, 32)
 
 
 if __name__ == '__main__':
