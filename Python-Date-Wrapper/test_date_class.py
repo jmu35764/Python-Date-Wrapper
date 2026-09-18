@@ -23,6 +23,13 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.month, 2)
         self.assertEqual(d.day, 28)
 
+    def test_leap_year(self):
+        #Test if the leap year function works
+        d = Date(2020, 2, 29)
+        self.assertTrue(d.is_leap_year())
+        d.set_date(2021, 2, 28)
+        self.assertFalse(d.is_leap_year())
+
 
 if __name__ == '__main__':
     unittest.main()
