@@ -30,6 +30,10 @@ class TestDate(unittest.TestCase):
         d.set_date(2021, 2, 28)
         self.assertFalse(d.is_leap_year())
 
+    def test_static_leap_year(self):
+                #Test if the static leap year function works
+        self.assertTrue(Date.is_Year_leap(2020))
+        self.assertFalse(Date.is_Year_leap(2021))
 
 if __name__ == '__main__':
     unittest.main()
