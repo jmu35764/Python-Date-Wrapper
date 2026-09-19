@@ -39,6 +39,8 @@ class Date:
     def to_numeric_string(self) -> str:
         return self.__date.strftime("%m/%d/%Y")
 
+    def to_month_first_string(self) -> str:
+        return self.__date.strftime("%B %d, %Y")
 
 
 
