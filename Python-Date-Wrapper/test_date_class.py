@@ -55,6 +55,10 @@ class TestDate(unittest.TestCase):
         d = Date(2020, 2, 29)
         self.assertEqual(d.to_month_first_string(), "February 29, 2020")
 
+    def test_to_day_first_string(self) -> str:
+        d = Date(2020, 2, 29)
+        self.assertEqual(d.to_day_first_string(), "29 February 2020")
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -42,6 +42,9 @@ class Date:
     def to_month_first_string(self) -> str:
         return self.__date.strftime("%B %d, %Y")
 
+    def to_day_first_string(self) -> str:
+        return self.__date.strftime("%d %B %Y")
+
 
 
 
