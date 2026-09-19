@@ -35,5 +35,18 @@ class TestDate(unittest.TestCase):
         self.assertTrue(Date.is_Year_leap(2020))
         self.assertFalse(Date.is_Year_leap(2021))
 
+    def test_last_day(self):
+     #Test if the last day function works
+        d = Date(2020, 2, 29)
+        self.assertEqual(d.last_day(), 29)
+        d.set_date(2021, 2, 28)
+        self.assertEqual(d.last_day(), 28)
+
+    def static_last_day_of_month(self):
+        #Test if the static last day of month function works
+        self.assertEqual(Date.last_day_of_month(2020, 2), 29)
+        self.assertEqual(Date.last_day_of_month(2021, 2), 28)
+
+
 if __name__ == '__main__':
     unittest.main()
