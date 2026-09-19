@@ -42,10 +42,14 @@ class TestDate(unittest.TestCase):
         d.set_date(2021, 2, 28)
         self.assertEqual(d.last_day(), 28)
 
-    def static_last_day_of_month(self):
+    def test_static_last_day_of_month(self):
         #Test if the static last day of month function works
         self.assertEqual(Date.last_day_of_month(2020, 2), 29)
         self.assertEqual(Date.last_day_of_month(2021, 2), 28)
+
+    def test_to_numeric_string(self) -> str:
+        d = Date(2020, 2, 29)
+        self.assertEqual(d.to_numeric_string(), "02/29/2020")
 
 
 if __name__ == '__main__':

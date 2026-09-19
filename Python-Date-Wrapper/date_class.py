@@ -36,6 +36,9 @@ class Date:
     def last_day_of_month(year: int, month: int) -> int:
         return calendar.monthrange(year, month)[1]
 
+    def to_numeric_string(self) -> str:
+        return self.__date.strftime("%m/%d/%Y")
+
 
 
 
