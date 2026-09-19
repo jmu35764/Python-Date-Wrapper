@@ -27,6 +27,16 @@ class Date:
 
     @staticmethod
     def is_Year_leap(year: int) -> bool:
-        return calendar.isleap(year)    
+        return calendar.isleap(year)   
+    
+    def last_day(self) -> int:
+        return calendar.monthrange(self.__date.year, self.__date.month)[1]
+
+    @staticmethod
+    def last_day_of_month(year: int, month: int) -> int:
+        return calendar.monthrange(year, month)[1]
+
+
+
 
 
