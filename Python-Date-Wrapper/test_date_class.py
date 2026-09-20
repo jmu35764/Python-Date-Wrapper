@@ -17,21 +17,30 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.month, 2)
         self.assertEqual(d.day, 14)
 
+        d1 = Date(2010, 2, 29)
+        self.assertEqual(d1.year, 2010)
+        self.assertEqual(d1.month, 2)
+        self.assertEqual(d1.day, 29)
+
     def test_invalid_constructor(self):
         #Test if the constructor raises ValueError for invalid dates
-        self.assertRaises(ValueError)
-        d = Date(2001, 13, 15)  # 2001 is not a leap year, so this should raise an error
+        with self.assertRaises(ValueError):
+            d = Date(2001, 13, 15)  # 2001 is not a leap year, so this should raise an error
+            d1 = Date(2001, 0, 10)  # 2001 is not a leap year, so this should raise an error
+            d2 = Date(2001, 4, 31)  # 2001 is not a leap year, so this should raise an error
+            d3 = Date(2001, 2, 29)  # 2001 is not a leap year, so this should raise an error
+
+
 
     def test_invalid_day_entry(self):
         #Test if the value errors are raised when necesary
-        self.assertRaises(ValueError)
-        d1 = Date(1950, 12, 32)
+        with self.assertRaises(ValueError):
+            d1 = Date(1950, 12, 32)
 
     def test_invalid_month_entry(self):
         #Test if the value errors are raised when necesary
-        self.assertRaises(ValueError)
-        d1 = Date(1950, 13, 15)
-    
+        with self.assertRaises(ValueError):
+            d1 = Date(1950, 13, 15)
 
     def test_set_date(self):
         #Test if the day property can be modified
@@ -68,7 +77,7 @@ class TestDate(unittest.TestCase):
         self.assertFalse(d.is_leap_year())
 
     def test_static_leap_year(self):
-                #Test if the static leap year function works
+        #Test if the static leap year function works
         self.assertTrue(Date.is_Year_leap(2020))
         self.assertFalse(Date.is_Year_leap(2021))
 
