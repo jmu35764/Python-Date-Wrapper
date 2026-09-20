@@ -17,10 +17,16 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.month, 2)
         self.assertEqual(d.day, 14)
 
-    def test_day_entry(self):
+    def test_invalid_day_entry(self):
         #Test if the value errors are raised when necesary
         self.assertRaises(ValueError)
-        d1 = Date(1950, 13, 32)
+        d1 = Date(1950, 12, 32)
+
+    def test_invalid_month_entry(self):
+        #Test if the value errors are raised when necesary
+        self.assertRaises(ValueError)
+        d1 = Date(1950, 13, 15)
+    3
 
     def test_day_property_mod(self):
         #Test if the day property can be modified
