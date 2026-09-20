@@ -10,6 +10,13 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.month, 1)
         self.assertEqual(d.day, 1)
 
+    def test_valid_constructor(self):
+        #Test if the constructor for the date class gives the desired  date
+        d = Date(2000, 2, 14)
+        self.assertEqual(d.year, 2000)
+        self.assertEqual(d.month, 2)
+        self.assertEqual(d.day, 14)
+
     def test_date_entry(self):
         #Test if the value errors are raised when necesary
         self.assertRaises(ValueError)
