@@ -74,9 +74,9 @@ class TestDate(unittest.TestCase):
 
     def test_last_day(self):
      #Test if the last day function works
-        d = Date(2020, 2, 29)
+        d = Date(2020, 2, 14)
         self.assertEqual(d.last_day(), 29)
-        d.set_date(2021, 2, 28)
+        d.set_date(2021, 2, 14)
         self.assertEqual(d.last_day(), 28)
 
     def test_static_last_day_of_month(self):
