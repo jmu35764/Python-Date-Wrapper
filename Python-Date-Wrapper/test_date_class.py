@@ -3,7 +3,7 @@ from date_class import Date
 
 class TestDate(unittest.TestCase):
 
-    def test_constructor(self):
+    def test_default_constructor(self):
         #Test if the constructor for the date class gives the desired  date
         d = Date()
         self.assertEqual(d.year, 1900)
