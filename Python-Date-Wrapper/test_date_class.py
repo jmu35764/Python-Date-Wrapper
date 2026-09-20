@@ -26,8 +26,11 @@ class TestDate(unittest.TestCase):
         #Test if the constructor raises ValueError for invalid dates
         with self.assertRaises(ValueError):
             d = Date(2001, 13, 15)  
+        with self.assertRaises(ValueError):
             d1 = Date(2001, 2, 10)  
+        with self.assertRaises(ValueError):
             d2 = Date(2001, 4, 31) 
+        with self.assertRaises(ValueError):
             d3 = Date(2001, 2, 29)  
 
 
