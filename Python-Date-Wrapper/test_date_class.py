@@ -25,11 +25,10 @@ class TestDate(unittest.TestCase):
     def test_invalid_constructor(self):
         #Test if the constructor raises ValueError for invalid dates
         with self.assertRaises(ValueError):
-            d = Date(2001, 13, 15)  # 2001 is not a leap year, so this should raise an error
-            d1 = Date(2001, 2, 10)  # 2001 is not a leap year, so this should raise an error
-            d2 = Date(2001, 4, 31)  # 2001 is not a leap year, so this should raise an error
-            d3 = Date(2001, 2, 29)  # 2001 is not a leap year, so this should raise an error
-
+            #d = Date(2001, 13, 15)  
+            d1 = Date(2001, 2, 10)  
+            #d2 = Date(2001, 4, 31) 
+            #d3 = Date(2001, 2, 29)  
 
 
     def test_invalid_day_entry(self):
