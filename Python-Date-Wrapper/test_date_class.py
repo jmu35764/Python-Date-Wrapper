@@ -86,7 +86,7 @@ class TestDate(unittest.TestCase):
     def test_change_property(self):
         d = Date(2015, 4, 30)
         with self.assertRaises(AttributeError):
-            d.__day = 15
+            d.day = 15
 
     def test_to_numeric_string(self) -> str:
         d = Date(2020, 2, 29)
