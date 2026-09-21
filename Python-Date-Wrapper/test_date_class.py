@@ -53,9 +53,9 @@ class TestDate(unittest.TestCase):
 
     def test_original_date_after_failed_change(self):
         #Test if the day property can be modified
-        #self.assertRaises(ValueError)
         d = Date()
-        d.set_date(2021, 13, 28)
+        with self.assertRaises(ValueError):
+            d.set_date(2021, 13, 28)
         self.assertEqual(d.year, 1900)
         self.assertEqual(d.month, 1)
         self.assertEqual(d.day, 1)
