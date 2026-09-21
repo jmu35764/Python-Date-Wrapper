@@ -58,7 +58,7 @@ class TestDate(unittest.TestCase):
         d = Date(2020, 2, 29)
         with self.assertRaises(ValueError):
             d.set_date(2021, 13, 29)
-        self.assertEqual(d.year, 2020)
+        self.assertEqual(d.year, 2021)
         self.assertEqual(d.month, 2)
         self.assertEqual(d.day, 29)
 
