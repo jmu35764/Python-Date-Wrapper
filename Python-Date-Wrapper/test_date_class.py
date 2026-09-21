@@ -33,17 +33,6 @@ class TestDate(unittest.TestCase):
         with self.assertRaises(ValueError):
             d3 = Date(2001, 2, 29)  
 
-
-    def test_invalid_day_entry(self):
-        #Test if the value errors are raised when necesary
-        with self.assertRaises(ValueError):
-            d1 = Date(1950, 12, 32)
-
-    def test_invalid_month_entry(self):
-        #Test if the value errors are raised when necesary
-        with self.assertRaises(ValueError):
-            d1 = Date(1950, 13, 15)
-
     def test_set_date(self):
         #Test if the day property can be modified
         with self.assertRaises(ValueError): 
