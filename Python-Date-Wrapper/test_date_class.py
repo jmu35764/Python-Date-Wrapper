@@ -35,8 +35,7 @@ class TestDate(unittest.TestCase):
 
     def test_set_date(self):
         #Test if the day property can be modified
-        with self.assertRaises(ValueError): 
-            d = Date(2020, 2, 29)
+        d = Date(2020, 2, 29)
         d.set_date(2021, 2, 28)
         self.assertEqual(d.year, 2021)
         self.assertEqual(d.month, 2)
