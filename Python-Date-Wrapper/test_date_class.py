@@ -83,6 +83,10 @@ class TestDate(unittest.TestCase):
         self.assertEqual(Date.last_day_of_month(2020, 2), 29)
         self.assertEqual(Date.last_day_of_month(2021, 2), 28)
 
+    def test_change_property(self):
+        d = date(2015, 4, 30)
+        d.__day = 15;
+
     def test_to_numeric_string(self) -> str:
         d = Date(2020, 2, 29)
         self.assertEqual(d.to_numeric_string(), "02/29/2020")
