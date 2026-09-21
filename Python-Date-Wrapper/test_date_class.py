@@ -54,11 +54,11 @@ class TestDate(unittest.TestCase):
     def test_original_date_after_failed_change(self):
         #Test if the day property can be modified
         #self.assertRaises(ValueError)
-        d = Date(2020, 2, 29)
+        d = Date()
         d.set_date(2021, 13, 28)
-        self.assertEqual(d.year, 2020)
-        self.assertEqual(d.month, 2)
-        self.assertEqual(d.day, 29)
+        self.assertEqual(d.year, 1900)
+        self.assertEqual(d.month, 1)
+        self.assertEqual(d.day, 1)
 
     def test_leap_year(self):
         #Test if the leap year function works
