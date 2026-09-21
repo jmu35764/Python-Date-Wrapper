@@ -17,10 +17,10 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.month, 2)
         self.assertEqual(d.day, 14)
 
-        d1 = Date(2010, 2, 29)
+        d1 = Date(2010, 2, 28)
         self.assertEqual(d1.year, 2010)
         self.assertEqual(d1.month, 2)
-        self.assertEqual(d1.day, 29)
+        self.assertEqual(d1.day, 28)
 
     def test_invalid_constructor(self):
         #Test if the constructor raises ValueError for invalid dates
