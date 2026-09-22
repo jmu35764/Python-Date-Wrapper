@@ -4,14 +4,14 @@ from date_class import Date
 class TestDate(unittest.TestCase):
 
     def test_default_constructor(self):
-        #Test if the constructor for the date class gives the desired  date
+        #Test if the constructor for the date class gives the default date of 1/1/1900
         d = Date()
         self.assertEqual(d.year, 1900)
         self.assertEqual(d.month, 1)
         self.assertEqual(d.day, 1)
 
     def test_valid_constructor(self):
-        #Test if the constructor for the date class gives the desired  date
+        #Test if the constructor for the date class gives the desired entered date
         d = Date(2000, 2, 14)
         self.assertEqual(d.year, 2000)
         self.assertEqual(d.month, 2)

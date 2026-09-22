@@ -3,6 +3,10 @@ import calendar
 
 class Date:
     def __init__(self, year: int = 1900, month: int = 1, day: int = 1) -> None:
+        '''Automatically sets the initial date of the class 
+           to the given year, month, and day. If no values are given, 
+           it defaults to January 1, 1900.
+        '''
         self.__date = date(year, month, day)
 
     @property
@@ -23,10 +27,14 @@ class Date:
         self.__date = new_date
 
     def is_leap_year(self) -> bool:
+        ''' Tests if the year of the date is a leap year.
+        '''
         return calendar.isleap(self.__date.year)
 
     @staticmethod
     def is_Year_leap(year: int) -> bool:
+        '''Tests if the given year is a leap year.
+        '''
         return calendar.isleap(year)   
     
     def last_day(self) -> int:
@@ -37,12 +45,21 @@ class Date:
         return calendar.monthrange(year, month)[1]
 
     def to_numeric_string(self) -> str:
+        '''Returns the date in standard numeric
+           format (MM/DD/YYYY) as a string.
+        '''
         return self.__date.strftime("%m/%d/%Y")
 
     def to_month_first_string(self) -> str:
+        '''Returns the date in standard numeric
+           format (Month/DD/YYYY) as a string.
+        '''
         return self.__date.strftime("%B %d, %Y")
 
     def to_day_first_string(self) -> str:
+        '''Returns the date in standard numeric
+           format (DD/Month/YYYY) as a string.
+        '''
         return self.__date.strftime("%d %B %Y")
 
 
