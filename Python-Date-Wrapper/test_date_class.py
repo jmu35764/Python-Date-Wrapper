@@ -52,7 +52,7 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.month, 2)
         self.assertEqual(d.day, 29)
 
-   def test_leap_year(self):
+    def test_leap_year(self):
         #Test if the leap year function works
         d = Date(2020, 2, 29)
         self.assertTrue(d.is_leap_year())
