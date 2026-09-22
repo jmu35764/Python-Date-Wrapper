@@ -34,7 +34,7 @@ class TestDate(unittest.TestCase):
             d3 = Date(2001, 2, 29)  
 
     def test_set_date(self):
-        #Test if the day property can be modified
+        #Test if the set_date method can modify the date properties
         d = Date(2020, 2, 29)
         d.set_date(2021, 2, 28)
         self.assertEqual(d.year, 2021)
@@ -42,7 +42,9 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.day, 28)
 
     def test_invalid_set_date(self):
-        #Test if the day property can be modified
+        '''Test if the set_date method raises ValueError for invalid dates 
+           and maintians the original date if an invalid date is attempted to be set.
+        '''
         d = Date(2020, 2, 29)
         with self.assertRaises(ValueError):
             d.set_date(2021, 13, 29)
@@ -50,16 +52,7 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d.month, 2)
         self.assertEqual(d.day, 29)
 
-    def test_original_date_after_failed_change(self):
-        #Test if the day property can be modified
-        d = Date()
-        with self.assertRaises(ValueError):
-            d.set_date(2021, 13, 28)
-        self.assertEqual(d.year, 1900)
-        self.assertEqual(d.month, 1)
-        self.assertEqual(d.day, 1)
-
-    def test_leap_year(self):
+   def test_leap_year(self):
         #Test if the leap year function works
         d = Date(2020, 2, 29)
         self.assertTrue(d.is_leap_year())
