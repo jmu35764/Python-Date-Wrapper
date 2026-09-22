@@ -77,19 +77,23 @@ class TestDate(unittest.TestCase):
         self.assertEqual(Date.last_day_of_month(2021, 2), 28)
 
     def test_change_property(self):
+        #Test if the date properties are read-only and cannot be changed directly
         d = Date(2015, 4, 30)
         with self.assertRaises(AttributeError):
             d.day = 15
 
     def test_to_numeric_string(self) -> str:
+        #Test if the to_numeric_string method returns the correct string representation of the date
         d = Date(2020, 2, 29)
         self.assertEqual(d.to_numeric_string(), "02/29/2020")
 
     def test_to_month_first_string(self) -> str:
+        #Test if the to_month_first_string method returns the correct string representation of the date
         d = Date(2020, 2, 29)
         self.assertEqual(d.to_month_first_string(), "February 29, 2020")
 
     def test_to_day_first_string(self) -> str:
+        #Test if the to_day_first_string method returns the correct string representation of the date
         d = Date(2020, 2, 29)
         self.assertEqual(d.to_day_first_string(), "29 February 2020")
 
