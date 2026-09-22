@@ -54,6 +54,7 @@ class TestDate(unittest.TestCase):
 
     def test_leap_year(self):
         #Test if the leap year function works
+
         d = Date(2020, 2, 29)
         self.assertTrue(d.is_leap_year())
         d.set_date(2021, 2, 28)
@@ -66,6 +67,7 @@ class TestDate(unittest.TestCase):
 
     def test_last_day(self):
      #Test if the last day function works
+
         d = Date(2020, 2, 14)
         self.assertEqual(d.last_day(), 29)
         d.set_date(2021, 2, 14)
