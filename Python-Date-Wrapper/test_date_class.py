@@ -99,8 +99,11 @@ class TestDate(unittest.TestCase):
         d = Date(2020, 2, 29)
         self.assertEqual(d.to_day_first_string(), "29 February 2020")
 
-    
-        
+    def test_Conv_value(self):
+        #Test if the Conv_Value method works correctly
+        d = Date(2020, 2, 29)
+        self.assertEqual(d.Conv_Value(), 737465)
+
     def test_sub_overload(self):
         #Test if the __sub__ method works correctly
         d1 = Date(2020, 4, 10)
