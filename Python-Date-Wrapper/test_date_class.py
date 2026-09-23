@@ -99,7 +99,11 @@ class TestDate(unittest.TestCase):
         d = Date(2020, 2, 29)
         self.assertEqual(d.to_day_first_string(), "29 February 2020")
 
-
+    def test_sub_overload(self):
+        #Test if the __sub__ method works correctly
+        d1 = Date(2020, 4, 10)
+        d2 = Date(2020, 4, 2)
+        self.assertEqual(d1-d2, 8)
 
 
 if __name__ == '__main__':
