@@ -77,7 +77,7 @@ class Date:
         if not isinstance(other, Date):
             return NotImplemented
 
-            return self.__date.toordinal() - other.__date.toordinal()
+        return self.__date.toordinal() - other.__date.toordinal()
 
 
 
