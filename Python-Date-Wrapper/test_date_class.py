@@ -101,7 +101,7 @@ class TestDate(unittest.TestCase):
 
     def test_Conv_value(self):
         #Test if the Conv_Value method works correctly
-        d = Date(1, 2, 1)
+        d = Date(1, 1, 2)
         self.assertEqual(d.Conv_Value(), 2)
 
     def test_sub_overload(self):
