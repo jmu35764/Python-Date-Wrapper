@@ -106,7 +106,7 @@ class TestDate(unittest.TestCase):
         d2 = Date(1, 12, 31)
         self.assertEqual(d2.Conv_Value(), 365)
 
-    def test_sub_overload(self):
+    def test_sub_overload(self) -> int:
         #Test if the __sub__ method works correctly
         d1 = Date(2020, 4, 10)
         d2 = Date(2020, 4, 9)
