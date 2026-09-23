@@ -110,9 +110,8 @@ class TestDate(unittest.TestCase):
         #Test if the __sub__ method works correctly
         d1 = Date(2020, 4, 10)
         d2 = Date(2020, 4, 9)
-        result_1 = d1 - d2
-        result_2 = d2 - d1
-        self.assertIsInstance(result_1, int)
+
+        self.assertIsInstance(d1-d2, int)
         self.assertEqual(result_1, 1)
         self.assertEqual(d2-d1, -1)
 
