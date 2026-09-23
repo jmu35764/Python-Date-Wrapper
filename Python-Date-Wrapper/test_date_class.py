@@ -112,7 +112,7 @@ class TestDate(unittest.TestCase):
         d2 = Date(2020, 4, 9)
 
         self.assertIsInstance(d1-d2, int)
-        self.assertEqual(result_1, 1)
+        self.assertEqual(d1-d2, 1)
         self.assertEqual(d2-d1, -1)
 
 
