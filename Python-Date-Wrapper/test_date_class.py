@@ -114,7 +114,7 @@ class TestDate(unittest.TestCase):
         result_2 = d2 - d1
         self.assertIsInstance(result_1, int)
         self.assertEqual(result_1, 1)
-        self.assertEqual(result_2, -1)
+        self.assertEqual(d2-d1, -1)
 
 
 if __name__ == '__main__':
