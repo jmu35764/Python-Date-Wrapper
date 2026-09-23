@@ -71,7 +71,7 @@ class Date:
         '''
         return self.__date.toordinal()
 
-    def __sub__(self, other; object) -> int:
+    def __sub__(self, other: object) -> int:
         '''Returns the difference in days between two Date objects.
         '''
         if not isinstance(other, Date):
