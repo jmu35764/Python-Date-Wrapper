@@ -66,11 +66,6 @@ class Date:
     #This comment is to test if the branch appears on github
 
     
-    def Conv_Value(self) -> int:
-        '''Returns the date as an integer value counting the number of days since a reference date.
-        '''
-        return self.__date.toordinal()
-
     def __sub__(self, other: object) -> int:
         '''Returns the difference in days between two Date objects.
         '''
