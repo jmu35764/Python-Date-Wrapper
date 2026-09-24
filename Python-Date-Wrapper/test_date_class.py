@@ -130,6 +130,8 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d5.increment().to_numeric_string(), "02/29/2016")
         d5 = Date(2016, 2, 29)
         self.assertEqual(d5.increment().to_numeric_string(), "03/01/2016")
+        d6 = Date(2014, 12, 31)
+        self.assertEqual(d6.increment().to_numeric_string(), "01/01/2015")
 
 if __name__ == '__main__':
     unittest.main()
