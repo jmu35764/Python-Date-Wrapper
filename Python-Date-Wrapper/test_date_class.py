@@ -119,7 +119,7 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d2-d1, -8)
         self.assertEqual(d1-d1, 0)
         self.assertEqual(d3-d2, 29)
-        self.assertEqual(d5-d4, 815)
+        self.assertEqual(d4-d5, 815)
         with self.assertRaises(TypeError):
             d1 - 5
 
