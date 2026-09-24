@@ -80,8 +80,8 @@ class Date:
         self.__date += timedelta(days=1)
         return self
 
-    def increment(self) -> "Date":
-        '''Increments the date by one day.
+    def decrement(self) -> "Date":
+        '''Decrements the date by one day.
         '''
         self.__date -= timedelta(days=1)
         return self
