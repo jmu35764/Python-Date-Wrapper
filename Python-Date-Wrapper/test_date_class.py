@@ -183,6 +183,20 @@ class TestDate(unittest.TestCase):
         self.assertEqual(result.day, 18)
         self.assertEqual(result.year, 2018)
 
+    @patch("builtins.input", side_effect=["4", "32", "2018"])
+    def test_from_input_creates_date4(self, mock_input):
+        result = Date.from_input()
+        self.assertEqual(result.month, 4)
+        self.assertEqual(result.day, 32 )
+        self.assertEqual(result.year, 2018)
+
+    @patch("builtins.input", side_effect=["2", "29", "2018"])
+    def test_from_input_creates_date5(self, mock_input):
+        result = Date.from_input()
+        self.assertEqual(result.month, 2)
+        self.assertEqual(result.day, 29)
+        self.assertEqual(result.year, 2018)
+
 
 
 
