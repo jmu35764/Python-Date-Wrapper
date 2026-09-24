@@ -136,5 +136,22 @@ class TestDate(unittest.TestCase):
         returned_value = test_date.increment()
         self.assertIs(returned_value, test_date)
 
+    def test_decrement_overload(self) -> "Date":
+        #Test if the decrement method works correctly
+        d1 = Date(2014, 5, 1)
+        self.assertEqual(d1.decrement().to_numeric_string(), "04/30/2014")
+        d2 = date(2014, 3, 1)
+        self.assertEqual(d2.decrement().to_numeric_string(), "02/28/2014")
+        d3 = Date(2016, 3, 1)
+        self.assertEqual(d3.decrement().to_numeric_string(), "02/29/2016")
+        d4 = Date(2014, 1, 1)
+        self.assertEqual(d4.decrement().to_numeric_string(), "12/31/2013")
+        test_date = Date(2014, 12, 30)
+        returned_value = test_date.increment()
+        self.assertIs(returned_value, test_date)
+
+        
+
+
 if __name__ == '__main__':
     unittest.main()
