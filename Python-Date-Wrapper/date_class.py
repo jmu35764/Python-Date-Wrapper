@@ -93,12 +93,14 @@ class Date:
     def from_input(cls) -> "Date":
         '''Creates a Date object from user input.
         '''
-        # Read values and let any ValueError propagate to the caller so
-        # callers (and tests) can handle invalid input deterministically.
-        month = int(input("Enter month (1-12): "))
-        day = int(input("Enter day (1-31): "))
-        year = int(input("Enter year (YYYY): "))
-        return cls(year, month, day)
+        # Read values and normalize any input or construction errors to a ValueError
+        try:
+            month = int(input("Enter month (1-12): "))
+            day = int(input("Enter day (1-31): "))
+            year = int(input("Enter year (YYYY): "))
+            return cls(year, month, day)
+        except ValueError:
+            raise ValueError("Invalid date input: enter numeric month, day, and year forming a valid date")
 
 
 
