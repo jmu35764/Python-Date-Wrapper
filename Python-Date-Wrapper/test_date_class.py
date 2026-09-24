@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 from date_class import Date
 
 class TestDate(unittest.TestCase):
@@ -160,6 +161,16 @@ class TestDate(unittest.TestCase):
         self.assertEqual(str(d3), "February 29, 2016")
         d4 = Date(2014, 1, 1)
         self.assertEqual(str(d4), "January 01, 2014")
+
+    @patch("builtins.input", side_effect=["4", "18", "2018"])
+    def test_from_input_creates_date(self, mock_input):
+        result = Date.from_input()
+        self.assertEqual(result.month, 4)
+        self.assertEqual(result.day, 18)
+        self.assertEqual(result.year, 2018)
+
+
+
 
 
 if __name__ == '__main__':
