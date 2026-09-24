@@ -116,6 +116,11 @@ class TestDate(unittest.TestCase):
         with self.assertRaises(TypeError):
             d1 - 5
 
+    def test_increment_overload(self) -> "Date":
+        #Test if the increment method works correctly
+        d1 = Date(2014, 4, 18)
+        self.assertEqual(d1.increment().to_numeric_string(), "04/19/2014")
+
 
 if __name__ == '__main__':
     unittest.main()
