@@ -120,7 +120,7 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d1-d1, 0)
         self.assertEqual(d3-d2, 30)
         self.assertEqual(d4-d3, 365)
-        self.assertEqual(d5-d2, 41)
+        self.assertEqual(d2-d5, 41)
 
 
 
