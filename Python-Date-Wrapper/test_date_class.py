@@ -150,7 +150,7 @@ class TestDate(unittest.TestCase):
         returned_value = test_date.decrement()
         self.assertIs(returned_value, test_date)
 
-    def test_string_overload(self) -. str:
+    def test_string_overload(self) -> str:
         #Test if the __str__ method works correctly
         d1 = Date(2018, 4, 18)
         self.assertEqual(str(d1), "April 18, 2018")
