@@ -74,6 +74,11 @@ class Date:
 
         return self.__date.toordinal() - other.__date.toordinal()
 
+    def increment(self) -> Date:
+        '''Increments the date by one day.
+        '''
+        self.__date += timedelta(days=1)
+        return self
 
 
 
