@@ -86,5 +86,8 @@ class Date:
         self.__date -= timedelta(days=1)
         return self
 
+    def __str__(self) -> str:
+        return self.to_month_first_string()
+
 
 
