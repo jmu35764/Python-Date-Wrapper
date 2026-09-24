@@ -93,10 +93,12 @@ class Date:
     def from_input(cls) -> "Date":
         '''Creates a Date object from user input.
         '''
-        year = int(input("Enter year (YYYY): "))
-        month = int(input("Enter month (1-12): "))
-        day = int(input("Enter day (1-31): "))
-        return cls(year, month, day)
+        try:
+            
+            year = int(input("Enter year (YYYY): "))
+            month = int(input("Enter month (1-12): "))
+            day = int(input("Enter day (1-31): "))
+            return cls(year, month, day)
 
         except ValueError as e:
             print(f"Invalid date: {e}. Please try again.")
