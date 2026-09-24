@@ -155,11 +155,11 @@ class TestDate(unittest.TestCase):
         d1 = Date(2018, 4, 18)
         self.assertEqual(str(d1), "April 18, 2018")
         d2 = Date(2014, 3, 1)
-        self.assertEqual(str(d2), "March 1, 2014")
+        self.assertEqual(str(d2), "March 01, 2014")
         d3 = Date(2016, 2, 29)
         self.assertEqual(str(d3), "February 29, 2016")
         d4 = Date(2014, 1, 1)
-        self.assertEqual(str(d4), "January 1, 2014")
+        self.assertEqual(str(d4), "January 01, 2014")
 
 
 if __name__ == '__main__':
