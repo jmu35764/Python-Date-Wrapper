@@ -108,20 +108,20 @@ class TestDate(unittest.TestCase):
 
     def test_sub_overload(self) -> int:
         #Test if the __sub__ method works correctly
-        d1 = Date(2020, 4, 10)
-        d2 = Date(2020, 4, 9)
-        d3 = Date(2020, 5, 9)
-        d4 = Date(2021, 5, 9)
-        d5 = Date(2020, 2, 28)
+        d1 = Date(2014, 4, 18)
+        d2 = Date(2014, 4, 10)
+        d3 = Date(2014, 5, 9)
+        d4 = Date(2006, 2, 2)
+        d5 = Date(2003, 11, 10)
 
         self.assertIsInstance(d1-d2, int)
-        self.assertEqual(d1-d2, 1)
-        self.assertEqual(d2-d1, -1)
+        self.assertEqual(d1-d2, 8)
+        self.assertEqual(d2-d1, -8)
         self.assertEqual(d1-d1, 0)
-        self.assertEqual(d3-d2, 30)
-        self.assertEqual(d4-d3, 365)
-        self.assertEqual(d2-d5, 41)
-
+        self.assertEqual(d3-d2, 29)
+        self.assertEqual(d5-d4, 815)
+        with self.assertRaises(TypeError):
+            d1 - 5
 
 
 if __name__ == '__main__':
