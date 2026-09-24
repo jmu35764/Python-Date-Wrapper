@@ -120,6 +120,10 @@ class TestDate(unittest.TestCase):
         #Test if the increment method works correctly
         d1 = Date(2014, 4, 18)
         self.assertEqual(d1.increment().to_numeric_string(), "04/19/2014")
+        d2 = Date(2014, 4, 30)
+        self.assertEqual(d2.increment().to_numeric_string(), "05/01/2014")
+        d3 = Date(2014, 1, 31)
+        self.assertEqual(d3.increment().to_numeric_string(), "02/01/2014")
 
 
 if __name__ == '__main__':
