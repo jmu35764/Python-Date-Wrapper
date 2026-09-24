@@ -140,7 +140,7 @@ class TestDate(unittest.TestCase):
         #Test if the decrement method works correctly
         d1 = Date(2014, 5, 1)
         self.assertEqual(d1.decrement().to_numeric_string(), "04/30/2014")
-        d2 = date(2014, 3, 1)
+        d2 = Date(2014, 3, 1)
         self.assertEqual(d2.decrement().to_numeric_string(), "02/28/2014")
         d3 = Date(2016, 3, 1)
         self.assertEqual(d3.decrement().to_numeric_string(), "02/29/2016")
