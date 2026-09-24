@@ -95,9 +95,9 @@ class Date:
         '''
         # Read values and let any ValueError propagate to the caller so
         # callers (and tests) can handle invalid input deterministically.
-        year = int(input("Enter year (YYYY): "))
         month = int(input("Enter month (1-12): "))
         day = int(input("Enter day (1-31): "))
+        year = int(input("Enter year (YYYY): "))
         return cls(year, month, day)
 
 
