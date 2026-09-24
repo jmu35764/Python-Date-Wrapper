@@ -112,6 +112,7 @@ class TestDate(unittest.TestCase):
         d2 = Date(2020, 4, 9)
         d3 = Date(2020, 5, 9)
         d4 = Date(2021, 5, 9)
+        d5 = Date(2020, 2, 28)
 
         self.assertIsInstance(d1-d2, int)
         self.assertEqual(d1-d2, 1)
@@ -119,6 +120,7 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d1-d1, 0)
         self.assertEqual(d3-d2, 30)
         self.assertEqual(d4-d3, 365)
+        self.assertEqual(d5-d2, 41)
 
 
 
