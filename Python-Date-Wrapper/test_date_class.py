@@ -147,6 +147,8 @@ class TestDate(unittest.TestCase):
         self.assertEqual(d3.decrement().to_numeric_string(), "02/29/2016")
         d4 = Date(2014, 1, 1)
         self.assertEqual(d4.decrement().to_numeric_string(), "12/31/2013")
+        d5 = Date(2014, 5, 2)
+        self.assertEqual(d5.decrement().to_numeric_string(), "05/01/2014")
         test_date = Date(2014, 12, 30)
         returned_value = test_date.decrement()
         self.assertIs(returned_value, test_date)
